@@ -245,6 +245,9 @@ void RealSenseNodeFactory::onInit()
     	privateNh.param("usb_port_id", _usb_port_id, std::string(""));
     	privateNh.param("device_type", _device_type, std::string(""));
 
+        std::cout << "serial number = " << _serial_no << '\n';
+        std::cout << "usb_port_id = " << _usb_port_id << '\n';
+        std::cout << "device_type = " << _device_type << '\n';
 		std::string rosbag_filename("");
 		privateNh.param("rosbag_filename", rosbag_filename, std::string(""));
 		if (!rosbag_filename.empty())
