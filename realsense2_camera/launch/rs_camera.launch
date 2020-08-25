@@ -30,7 +30,7 @@
   <arg name="infra_fps"           default="30"/>
   <arg name="color_fps"           default="30"/>
   <arg name="gyro_fps"            default="400"/>
-  <arg name="accel_fps"           default="250"/>
+  <arg name="accel_fps"           default="200"/>
   <arg name="enable_gyro"         default="false"/>
   <arg name="enable_accel"        default="false"/>
 
@@ -53,6 +53,11 @@
   <arg name="calib_odom_file"           default=""/>
   <arg name="publish_odom_tf"           default="true"/>
   <arg name="allow_no_texture_points"   default="false"/>
+
+
+   <node name="lidar_link_publisher" pkg="tf2_ros" type="static_transform_publisher" args=" 0 0 0 0, -0.1736483, 0, 0.9848077 /rgbd_torso_link /l515_link"/>
+
+
 
   <group ns="$(arg camera)">
     <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
