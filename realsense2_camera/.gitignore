@@ -1,2 +1,3 @@
 CMakeLists.txt.user
 recordings/*.bag
+!recordings/l515_short_range_settings.json
